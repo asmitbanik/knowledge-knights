@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Knights - Resources</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="Hackathon Logo - Group Study Portal - 1.jpeg">
+
+</head>
+
+<body>
+    <header>
+        <h1>Study Resources</h1>
+        <br>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="chat.html">Chat</a>
+            <a href="notes.html">Notes</a>
+            <a href="video.html">Video Conference</a>
+            <a href="about.html">About</a>
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+
+        </nav>
+    </header>
+    <section>
+        <h2>Resource Links</h2>
+
+        <!-- Section for uploading a file -->
+        <div>
+            <label for="file-input">Upload a File:</label>
+            <input type="file" id="file-input">
+            <button id="add-file-btn">Add File</button>
+        </div>
+
+        <!-- Section for adding a URL -->
+        <div>
+            <label for="url-input">Add a URL:</label>
+            <input type="text" id="url-input" placeholder="Enter URL here">
+            <button id="add-url-btn">Add URL</button>
+        </div>
+
+        <!-- Displaying the resource links -->
+        <div id="resource-links">
+            <!-- Resource links will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

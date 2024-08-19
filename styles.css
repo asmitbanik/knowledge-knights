@@ -1,0 +1,302 @@
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    perspective: 1000px; /* Adds 3D perspective to the entire page */
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateZ(50px); /* 3D effect */
+    transition: transform 0.5s ease;
+}
+
+header:hover {
+    transform: translateZ(70px); /* 3D effect on hover */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px; /* Reduced font size */
+    padding: 10px 0; /* Reduced padding */
+    animation: fadeIn 2s ease-in-out; /* Adds a fade-in effect */
+}
+
+nav a {
+    margin: 0 10px;
+    color: #ff7675;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ff4757;
+    transform: scale(1.1); /* Enlarges the link slightly on hover */
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    transform: translateZ(30px); /* Adds depth to the section */
+    transition: transform 0.5s ease;
+}
+
+section:hover {
+    transform: translateZ(50px); /* 3D effect on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(20px); /* Adds depth to the form */
+}
+
+label,
+input,
+button,
+textarea {
+    margin-bottom: 10px;
+}
+
+input,
+textarea,
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input,
+textarea {
+    background-color: #333;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input:hover,
+textarea:hover {
+    background-color: #444;
+    transform: translateZ(10px); /* 3D effect on hover */
+}
+
+button {
+    background-color: #ff7675;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4757;
+    transform: scale(1.05) translateZ(10px); /* Enlarges and adds depth on hover */
+}
+
+#upcoming-meetings,
+#scheduled-sessions,
+#resource-links,
+#chat-container,
+#notes-container {
+    background-color: #1e1e2f;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transform: translateZ(30px); /* Adds depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#upcoming-meetings:hover,
+#scheduled-sessions:hover,
+#resource-links:hover,
+#chat-container:hover,
+#notes-container:hover {
+    transform: translateZ(50px); /* 3D effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover */
+}
+
+#videoc {
+    background-color: antiquewhite;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transform: translateZ(30px); /* Adds depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#videoc:hover {
+    transform: translateZ(50px); /* 3D effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover */
+}
+
+/* Chat Container Styles */
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 10px; /* Space between the avatar and message */
+    padding: 10px;
+    background-color: #1e1e2f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateZ(30px); /* Adds depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.chat-message:hover {
+    transform: translateZ(50px); /* 3D effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover */
+}
+
+.avatar {
+    width: 50px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+    border-radius: 50%; /* Make it circular */
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the background image */
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns the content to the center vertically */
+}
+
+.message-content .name {
+    font-size: 16px; /* Font size of the name */
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.message-content .text {
+    font-size: 14px; /* Font size of the message */
+    color: #ddd;
+}
+
+/* Notes Section Styles */
+#notes-container {
+    padding: 15px;
+}
+
+.note {
+    background-color: #1e1e2f;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateZ(30px); /* Adds depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.note:hover {
+    transform: translateZ(50px); /* 3D effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover */
+}
+
+.delete-note {
+    background-color: #ff4757;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.delete-note:hover {
+    background-color: #ff6b81;
+    transform: scale(1.05);
+}
+
+/* Specific styles for the countdown timer */
+.meeting {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform: translateZ(40px); /* Adds depth */
+}
+
+.meeting:hover {
+    transform: scale(1.05) translateZ(60px); /* 3D effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover */
+}
+
+.meeting p:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.meeting p:last-child {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff7675;
+    animation: pulse 1s infinite; /* Adds a pulsing animation */
+}
+
+.meeting p:last-child span {
+    margin: 0 5px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Undo Container Styles */
+#undo-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e1e2f;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateZ(30px); /* Adds depth */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#undo-container:hover {
+    transform: translateZ(50px); /* 3D effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deepens the shadow on hover */
+}
+
+#undo-container button {
+    background-color: #ff7675;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#undo-container button:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
